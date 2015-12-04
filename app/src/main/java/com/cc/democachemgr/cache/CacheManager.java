@@ -13,6 +13,7 @@ import com.cc.democachemgr.util.CLog;
 import com.cc.democachemgr.util.CubeDebug;
 
 /**
+ *
  * @author http://www.liaohuqiu.net
  */
 public class CacheManager {
