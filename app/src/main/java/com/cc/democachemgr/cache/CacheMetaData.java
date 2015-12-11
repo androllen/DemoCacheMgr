@@ -1,8 +1,8 @@
 package com.cc.democachemgr.cache;
 
-import org.json.JSONObject;
+import com.cc.democachemgr.util.JsonData;
 
-import com.cc.democachemgr.request.JsonData;
+import org.json.JSONObject;
 
 /**
  * A description for the data in cache system

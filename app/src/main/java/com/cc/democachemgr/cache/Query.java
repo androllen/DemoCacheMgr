@@ -2,7 +2,7 @@ package com.cc.democachemgr.cache;
 
 import android.text.TextUtils;
 
-import com.cc.democachemgr.request.JsonData;
+import com.cc.democachemgr.util.JsonData;
 
 public class Query<T> implements ICacheAble<T> {
 

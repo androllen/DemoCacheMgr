@@ -4,10 +4,11 @@ import android.app.Application;
 import android.os.Environment;
 
 import com.cc.democachemgr.cache.CacheManager;
+import com.cc.democachemgr.cache.CacheManagerFactory;
 import com.cc.democachemgr.image.ImageLoaderFactory;
 import com.cc.democachemgr.image.impl.DefaultImageLoadHandler;
 import com.cc.democachemgr.image.impl.DefaultImageReSizer;
-import com.cc.democachemgr.request.RequestCacheManager;
+
 import com.cc.democachemgr.util.LocalDisplay;
 import com.cc.democachemgr.util.NetworkStatusManager;
 
@@ -28,7 +29,10 @@ public class CubeDemoApplication extends Application{
 
         CacheManager.init(getApplicationContext());
         initImageLoader();
-        initRequestCache();
+
+        //RequestManager.getInstance().setRequestProxyFactory(DemoRequestProxy.getInstance());
+        // init local cache, just use default
+        CacheManagerFactory.initDefaultCache(this, null, -1, -1);
     }
     private void initImageLoader() {
 
@@ -38,8 +42,8 @@ public class CubeDemoApplication extends Application{
                 // memory size
                 1024 * 10,
                 // disk cache directory
-                // path1.getAbsolutePath(),
-                null,
+                path1.getAbsolutePath(),
+                //null,
                 // disk cache size
                 ImageLoaderFactory.DEFAULT_FILE_CACHE_SIZE_IN_KB
         );
@@ -50,8 +54,5 @@ public class CubeDemoApplication extends Application{
         ImageLoaderFactory.setDefaultImageLoadHandler(handler);
         ImageLoaderFactory.setDefaultImageReSizer(DefaultImageReSizer.getInstance());
     }
-    private void initRequestCache() {
-        String dir = "request-cache";
-        RequestCacheManager.init(this, dir, 1024 * 10, 1024 * 10);
-    }
+
 }

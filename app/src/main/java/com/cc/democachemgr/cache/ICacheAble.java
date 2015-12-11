@@ -1,6 +1,6 @@
 package com.cc.democachemgr.cache;
 
-import com.cc.democachemgr.request.JsonData;
+import com.cc.democachemgr.util.JsonData;
 
 /**
  * Describe the behaviour of a object who can be cached

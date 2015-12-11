@@ -1,4 +1,4 @@
-package com.cc.democachemgr.request;
+package com.cc.democachemgr.util;
 
 import org.json.JSONArray;
 import org.json.JSONException;

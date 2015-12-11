@@ -32,27 +32,27 @@ public class NetworkStatusManager {
 
 
     /**
-     * 隆岑利大窃艶
+     * 隆????????
      */
     public static final int NETWORK_CLASS_UNKNOWN = 0;
     public static final String NETWORK_CLASS_UNKNOWN_NAME = "UNKNOWN";
     /**
-     * 2G利大
+     * 2G????
      */
     public static final int NETWORK_CLASS_2G = 1;
     public static final String NETWORK_CLASS_2G_NAME = "2G";
     /**
-     * 3G利大
+     * 3G????
      */
     public static final int NETWORK_CLASS_3G = 2;
     public static final String NETWORK_CLASS_3G_NAME = "3G";
     /**
-     * 4G利大
+     * 4G????
      */
     public static final int NETWORK_CLASS_4G = 3;
     public static final String NETWORK_CLASS_4G_NAME = "4G";
     /**
-     * WIFI利大
+     * WIFI????
      */
     public static final int NETWORK_CLASS_WIFI = 999;
     public static final String NETWORK_CLASS_WIFI_NAME = "WIFI";

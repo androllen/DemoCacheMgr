@@ -1,6 +1,6 @@
 package com.cc.democachemgr.cache;
 
-import com.cc.democachemgr.request.JsonData;
+import com.cc.democachemgr.util.JsonData;
 
 public interface QueryHandler<T> {
 

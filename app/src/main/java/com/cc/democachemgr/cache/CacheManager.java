@@ -8,9 +8,9 @@ import java.io.IOException;
 
 import com.cc.democachemgr.concurrent.SimpleExecutor;
 import com.cc.democachemgr.concurrent.SimpleTask;
-import com.cc.democachemgr.request.JsonData;
 import com.cc.democachemgr.util.CLog;
 import com.cc.democachemgr.util.CubeDebug;
+import com.cc.democachemgr.util.JsonData;
 
 /**
  *
@@ -49,12 +49,11 @@ public class CacheManager {
 
     private CacheManager(Context mContext) {
         this(mContext, DEFAULT_CACHE_DIR, DEFAULT_CACHE_MEMORY_CACHE_SIZE, DEFAULT_CACHE_DISK_CACHE_SIZE);
-        this.mContext = mContext;
     }
 
     public static void init(Context context) {
         if (instance == null) {
-            instance = new CacheManager(context.getApplicationContext());
+            instance = new CacheManager(context);
         }
     }
 
